@@ -20,6 +20,7 @@ public class PermissionUtil {
                 activity.requestPermissions(new String[] {
                         Manifest.permission.ACCESS_COARSE_LOCATION
                 }, 0);
+
             }
             else {
                 // 已拥有权限，作相应处理（调用定位SDK应当确保相关权限均被授权，否则可能引起定位失败）
