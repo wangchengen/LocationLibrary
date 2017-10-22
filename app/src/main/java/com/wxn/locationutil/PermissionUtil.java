@@ -12,6 +12,8 @@ import android.os.Build;
 
 public class PermissionUtil {
 
+    public static final int LOCATION_REQUEST_CODE = 100;
+
     public static boolean CanLocation(Activity activity){
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -19,7 +21,7 @@ public class PermissionUtil {
             if (activity.checkSelfPermission(Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
                 activity.requestPermissions(new String[] {
                         Manifest.permission.ACCESS_COARSE_LOCATION
-                }, 0);
+                }, LOCATION_REQUEST_CODE);
 
             }
             else {
