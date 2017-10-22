@@ -63,7 +63,7 @@ public class LocationUtil {
                 if (location == null) {
                     return;
                 }
-                Log.e("========", "获取到的定位类型："+location.getLocType());
+//                Log.e("========", "获取到的定位类型："+location.getLocType());
                 if (location.getLocType() == BDLocation.TypeNetWorkLocation) {
                     // 省市县
                     myProvince = location.getProvince();
