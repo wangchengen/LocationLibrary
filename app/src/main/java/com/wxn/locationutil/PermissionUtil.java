@@ -23,6 +23,7 @@ public class PermissionUtil {
                         Manifest.permission.ACCESS_COARSE_LOCATION
                 }, LOCATION_REQUEST_CODE);
 
+                return false;
             }
             else {
                 // 已拥有权限，作相应处理（调用定位SDK应当确保相关权限均被授权，否则可能引起定位失败）
@@ -34,7 +35,7 @@ public class PermissionUtil {
 
             return true;
         }
-        return false;
+
 
 
     }
